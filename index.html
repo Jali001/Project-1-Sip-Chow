@@ -5,33 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--this is the font awesome link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/7bc9717621.js" crossorigin="anonymous"></script>
+    <!--Css Link-->
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Sip & Chow</title>
 </head>
 <!--header section start-->
 <header class = "header">
     
-    <h1>Sip & Chow</h1>
+    <h1><i class="fa-solid fa-martini-glass"></i>Sip & Chow<i class="fa-solid fa-utensils"></i></h1>
 
 </header>
 
 <!--Body will include the buttons to search for food, beverage, and provide for input-->
 <body>
-    <i class="fa-sharp fa-solid fa-pot-food"></i>
-    <div class = "prompt">
-        <label for="name">I Would Like To:</label>
-        <div></div>
-        <input type="text" id="name" name="name" placeholder = "Beverage...">
-        <div class = "searchstring"></div>
-        <button clas ="btn">SIP</button>
-        <div>or</div>
-        <button clas ="btn">CHOW</button>
-        <div></div>
-        <label for="name">I Would Like To:</label>
-        <div></div>
-        <input type="text" id="name" name="name" placeholder = "Chow...">
-<script src="https://kit.fontawesome.com/3da1a747b2.js" crossorigin="anonymous"></script>
+    <div class = "prompt1">
+        <label for="name"><h2>I Would Like To:</h2></label>
+        <div><input type="text" id="name" name="name" placeholder = "Beverage...">
+        <button class="btn btn-primary search" type="button" id="button-Sip"><i class="fa-solid fa-martini-glass"></i></div>
+        <div><h3>OR</h3></div>
+        <label for="name"><h2>I Would Like To:</h2></label>
+        <div><input type="text" id="name" name="name" placeholder = "Chow...">
+        <button class="btn btn-primary search" type="button" id="button-Chow"><i class="fa-solid fa-utensils"></i>
+        </div>
+        <!--Java Script link-->
 <script src = "script.js"></script>    
 </body>
 
