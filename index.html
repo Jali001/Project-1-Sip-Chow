@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/7bc9717621.js" crossorigin="anonymous"></script>
     <!--Css Link-->
     <link rel="stylesheet" href="./style.css">
+    <!--Bulma-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Sip & Chow</title>
 </head>
 <!--header section start-->
@@ -19,15 +21,38 @@
 
 <!--Body will include the buttons to search for food, beverage, and provide for input-->
 <body>
-    <div class = "prompt1">
-        <label for="name"><h2>I Would Like To:</h2></label>
-        <div><input type="text" id="box" name="name" placeholder = "Beverage...">
+    <div class="columns">
+        <div class="column">
+            <label for="name"><h2>I Would Like To:</h2></label>
+        <div><input type="text" id="box" name="name" placeholder = "Sip...">
         <button class="btn btn-primary search" type="button" id="button-Sip"><i class="fa-solid fa-martini-glass"></i></div>
-        <div><h3>OR</h3></div>
-        <label for="name"><h2>I Would Like To:</h2></label>
+          <p class="bd-notification is-info">Beverages</p>
+          <div class="columns is-mobile">
+            <div class="column">
+              <p class="bd-notification is-info">First nested column</p>
+            </div>
+            <div class="column">
+              <p class="bd-notification is-info">Second nested column</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+            <label for="name"><h2>I Would Like To:</h2></label>
         <div><input type="text" id="box" name="name" placeholder = "Chow...">
         <button class="btn btn-primary search" type="button" id="button-Chow"><i class="fa-solid fa-utensils"></i>
         </div>
+          <p class="bd-notification is-danger">Food</p>
+          <div class="columns is-mobile">
+            <div class="column is-half">
+              <p class="bd-notification is-danger">50%</p>
+            </div>
+            <div class="column">
+              <p class="bd-notification is-danger">Auto</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
                        <!--Jguery Link-->
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
