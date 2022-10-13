@@ -1,3 +1,7 @@
+var btnSip = document.getElementById('button-Sip');
+var imageSip = document.getElementById('imageSip');
+console.log(btnSip);
+
 //food api
 const foodOptions = {
 	method: 'GET',
@@ -31,6 +35,39 @@ var foodUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=und
 //drink api variable 
 var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka';
 
+//change to getSipData
+
+
+  //here is the button response for the Sip button
+  btnSip.addEventListener('click',runSipImage)
+
+function runSipImage()
+{
+  console.log("code is running in the the function");
+  fetch(drinkUrl, drinkOptions)
+  .then(function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          console.log(data);
+
+         console.log(data.drinks[0].strDrinkThumb)
+
+         for (var i = 0; i < data.drinks.length; i++)
+         {
+          var firstimage = data.drinks[i].strDrinkThumb;
+         imageSip.src = firstimage;
+         }
+  
+        
+  
+        });
+      } else {
+        alert('Error: ' + response.statusText);
+      }
+    })
+}
+
+/*
 fetch(drinkUrl, drinkOptions)
 .then(function (response) {
     if (response.ok) {
@@ -39,21 +76,16 @@ fetch(drinkUrl, drinkOptions)
        console.log(data.drinks[0].strDrinkThumb)
 
        var firstimage = data.drinks[0].strDrinkThumb;
+       imageSip.src = firstimage;
 
-       var firstPic = document.getElementById("test");
-       console.log(firstPic);
-
-       firstDrink.appendChild(firstimage);
       });
     } else {
       alert('Error: ' + response.statusText);
     }
   })
+*/
 
-.then(response => console.log(response))
-.catch(err => console.error(err));
 
-getImage
 /*
 var displayRepos = function (repos) {
     if (repos.length === 0) {
