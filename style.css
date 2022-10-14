@@ -1,7 +1,24 @@
+.column{
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+.columns{
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
 header {
-    background-color: rgb(0, 255, 200);
-    text-align: center;
+     text-align: center;
     font-size: 50px;
+    color: #FFF;
+    background-color: #333;
+    text-shadow: green 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
+    }
+
+input#box{
+font-size: 20px;
 }
 
 label h2{
@@ -21,6 +38,9 @@ font-size: 15px ;
 
 button{
     font-size: 20px;
+    color: #FFF;
+    background-color: #333;
+    text-shadow: green 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
 }
 
 .column{
