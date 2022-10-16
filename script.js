@@ -1,8 +1,69 @@
 
 var btnSip = document.getElementById('button-Sip');
-var imageSip = document.getElementById('imageSip');
+var btnChow = document.getElementById('button-Chow');
+
+const testText = "This is a test to see if the format link is established";
+
+
 console.log(btnSip);
 
+
+
+var columnSipping = document.querySelector("#sipping");
+
+console.log(columnSipping);
+
+
+
+var sipAncestor = document.createElement("div");
+
+sipAncestor.classList.add("tileis-ancestor");
+
+sipAncestor.innerHTML = testText;
+
+sipAncestor.setAttribute("id","sip1");
+
+console.log(sipAncestor);
+
+columnSipping.appendChild(sipAncestor);
+console.log(sipAncestor);
+
+var sipParent1 = document.createElement("div");
+
+sipParent1.classList.add("tileis-parent");
+
+sipParent1.setAttribute("id","sip2");
+
+sipAncestor.appendChild(sipParent1);
+
+
+var sipChild1 = document.createElement("div");
+
+sipChild1.classList.add("tileis-childbox");
+
+sipParent1.appendChild(sipChild1);
+
+
+var sipParent2 = document.createElement("div");
+
+sipParent2.classList.add("tileis-parent");
+
+sipParent2.setAttribute("id","sip2");
+
+sipAncestor.appendChild(sipParent2);
+
+
+var sipChild2 = document.createElement("div");
+
+sipChild2.classList.add("tileis-childbox");
+
+sipParent2.appendChild(sipChild2);
+
+var sipDesTitle = document.createElement("p");
+sipDesTitle.classList.add("title");
+sipDesTitle.innerHTML = "test";
+
+sipChild2.appendChild(sipDesTitle);
 //food api
 const foodOptions = {
 	method: 'GET',
@@ -47,6 +108,7 @@ function runSipImage()
   console.log("code is running in the the function");
   fetch(drinkUrl, drinkOptions)
   .then(function (response) {
+    console.log("resposne is good");
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
@@ -55,7 +117,7 @@ function runSipImage()
 
          for (var i = 0; i < data.drinks.length; i++)
          {
-          var firstimage = data.drinks[i].strDrinkThumb;
+          var firstimage = data.drinks[0].strDrinkThumb;
          imageSip.src = firstimage;
          }
   
@@ -67,6 +129,31 @@ function runSipImage()
       }
     })
 }
+
+ //here is the button response for the Chow button
+ btnSip.addEventListener('click',runChowImage)
+
+ function runChowImage()
+{
+  console.log("code is running in the the function");
+  fetch(drinkUrl, foodOptions)
+  .then(function (response) {
+    console.log(data);
+    console.log("resposne is good");
+      
+        
+  
+        
+  
+       
+      } 
+        
+      
+    )
+}
+ 
+
+
 
 /*
 fetch(drinkUrl, drinkOptions)
