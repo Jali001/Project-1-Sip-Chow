@@ -1,6 +1,12 @@
 
-var btnSip = document.getElementById('button-Sip');
-var btnChow = document.getElementById('button-Chow');
+
+
+var btnSip = document.getElementById('button-Sip')
+
+var btnChow = document.getElementById('button-Chow').onclick = function(){
+  var btnChow = document.getElementById('box').value;
+  console.log('btnChow')
+}
 
 const testText = "This is a test to see if the format link is established";
 
@@ -131,27 +137,36 @@ function runSipImage()
 }
 
  //here is the button response for the Chow button
- btnSip.addEventListener('click',runChowImage)
+ btnChow.addEventListener('click',runChowImage)
 
  function runChowImage()
 {
   console.log("code is running in the the function");
-  fetch(drinkUrl, foodOptions)
+  fetch(foodUrl, foodOptions)
   .then(function (response) {
-    console.log(data);
     console.log("resposne is good");
+    if (response.ok)  {
+      response.json().then(function (data) {
+        console.log(data);
+
+       console.log(data.drinks[0].strDrinkThumb)
+
+       for (var i = 0; i < data.drinks.length; i++)
+       {
+        var firstimage = data.drinks[0].strDrinkThumb;
+       imageSip.src = firstimage;
+       }
+
       
-        
-  
-        
-  
-       
-      } 
-        
-      
-    )
+
+      });
+    } else {
+      alert('Error: ' + response.statusText);
+    }
+  })
 }
- 
+      
+
 
 
 
