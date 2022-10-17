@@ -2,12 +2,21 @@
     height: 100%;
     width: 50%;
     float: right;
+    font-size: 20px;
 }
 .columns{
     height: 100%;
     width: 50%;
     float: left;
+    font-size: 20px;
 }
+
+.tile.is-child.box{
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+    
 
 header {
      text-align: center;
@@ -41,8 +50,4 @@ button{
     color: #FFF;
     background-color: #333;
     text-shadow: green 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
-}
-
-.column{
-    font-size: 20px;
 }
