@@ -8,7 +8,7 @@ const testText = "This is a test to see if the format link is established";
 console.log(btnSip);
 
 
-
+function displayDrinks(){
 var columnSipping = document.querySelector("#sipping");
 
 console.log(columnSipping);
@@ -64,6 +64,8 @@ sipDesTitle.classList.add("title");
 sipDesTitle.innerHTML = "test";
 
 sipChild2.appendChild(sipDesTitle);
+
+}
 //food api
 const foodOptions = {
 	method: 'GET',
@@ -136,13 +138,11 @@ function runSipImage()
  function runChowImage()
 {
   console.log("code is running in the the function");
-  fetch(drinkUrl, foodOptions)
+  fetch(foodUrl, foodOptions)
   .then(function (response) {
     console.log(data);
     console.log("resposne is good");
       
-        
-  
         
   
        
