@@ -1,74 +1,73 @@
 
 var btnSip = document.getElementById('button-Sip');
 var btnChow = document.getElementById('button-Chow');
-var sipInput = document.getElementById("box1");
-var sipTest = sipInput.value.toLowerCase();
-console.log(sipTest);
+var sipInput = document.getElementById("box1").value;
+
+console.log(sipInput);
+
+btnSip.addEventListener('click',testsip);
+
 const testText = "This is a test to see if the format link is established";
 
-
-console.log(btnSip);
-
-
-function displayDrinks(){
-var columnSipping = document.querySelector("#sipping");
-
-console.log(columnSipping);
-
-
-
-var sipAncestor = document.createElement("div");
-
-sipAncestor.classList.add("tileis-ancestor");
-
-sipAncestor.innerHTML = testText;
-
-sipAncestor.setAttribute("id","sip1");
-
-console.log(sipAncestor);
-
-columnSipping.appendChild(sipAncestor);
-console.log(sipAncestor);
-
-var sipParent1 = document.createElement("div");
-
-sipParent1.classList.add("tileis-parent");
-
-sipParent1.setAttribute("id","sip2");
-
-sipAncestor.appendChild(sipParent1);
-
-
-var sipChild1 = document.createElement("div");
-
-sipChild1.classList.add("tileis-childbox");
-
-sipParent1.appendChild(sipChild1);
-
-
-var sipParent2 = document.createElement("div");
-
-sipParent2.classList.add("tileis-parent");
-
-sipParent2.setAttribute("id","sip2");
-
-sipAncestor.appendChild(sipParent2);
-
-
-var sipChild2 = document.createElement("div");
-
-sipChild2.classList.add("tileis-childbox");
-
-sipParent2.appendChild(sipChild2);
-
-var sipDesTitle = document.createElement("p");
-sipDesTitle.classList.add("title");
-sipDesTitle.innerHTML = "test";
-
-sipChild2.appendChild(sipDesTitle);
-
-}
-//food api
+  function displayDrinks(){
+    var columnSipping = document.querySelector("#sipping");
+    
+    console.log(columnSipping);
+    
+    
+    
+    var sipAncestor = document.createElement("div");
+    
+    sipAncestor.classList.add("tileis-ancestor");
+    
+    sipAncestor.innerHTML = testText;
+    
+    sipAncestor.setAttribute("id","sip1");
+    
+    console.log(sipAncestor);
+    
+    columnSipping.appendChild(sipAncestor);
+    console.log(sipAncestor);
+    
+    var sipParent1 = document.createElement("div");
+    
+    sipParent1.classList.add("tileis-parent");
+    
+    sipParent1.setAttribute("id","sip2");
+    
+    sipAncestor.appendChild(sipParent1);
+    
+    
+    var sipChild1 = document.createElement("div");
+    
+    sipChild1.classList.add("tileis-childbox");
+    
+    sipParent1.appendChild(sipChild1);
+    
+    
+    var sipParent2 = document.createElement("div");
+    
+    sipParent2.classList.add("tileis-parent");
+    
+    sipParent2.setAttribute("id","sip2");
+    
+    sipAncestor.appendChild(sipParent2);
+    
+    
+    var sipChild2 = document.createElement("div");
+    
+    sipChild2.classList.add("tileis-childbox");
+    
+    sipParent2.appendChild(sipChild2);
+    
+    var sipDesTitle = document.createElement("p");
+    sipDesTitle.classList.add("title");
+    sipDesTitle.innerHTML = "test";
+    
+    sipChild2.appendChild(sipDesTitle);
+    
+    }
+    //food api
 const foodOptions = {
 	method: 'GET',
 	headers: {
@@ -103,9 +102,18 @@ var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?' + sipinput;
 
 //change to getSipData
 
+function testsip(event)
+{
+event.preventDefault;
+console.log('this is the test sip event');
+console.log(sipInput);
+
+}
+
+
 
   //here is the button response for the Sip button
-  btnSip.addEventListener('click',runSipImage)
+
 
 function runSipImage()
 {
