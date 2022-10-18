@@ -105,6 +105,28 @@ var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka';
   //here is the button response for the Sip button
   btnSip.addEventListener('click',runSipImage)
 
+
+  function sipDropDown()
+  {
+    fetch(drinkUrl, drinkOptions)
+  .then(function (response) {
+    console.log("resposne is good");
+      if (response.ok) {
+        response.json().then(function (data) 
+        {
+          const mySipArray =[];
+          for (var i =0; data.drinks.length; i++)
+          {
+            for(var f =0; )
+          }
+        
+        
+        });
+      } else {
+        alert('Error: ' + response.statusText);
+      }
+    })
+  }
 function runSipImage()
 {
   console.log("code is running in the the function");
