@@ -1,11 +1,9 @@
 
 var btnSip = document.getElementById('button-Sip');
 var btnChow = document.getElementById('button-Chow');
-var sipInput = document.getElementById("box1").value;
+var sipInput = document.querySelector('box1');
 
-console.log(sipInput);
-
-btnSip.addEventListener('click',testsip);
+  btnSip.addEventListener('click', runSipImage);
 
 const testText = "This is a test to see if the format link is established";
 
@@ -15,7 +13,7 @@ const testText = "This is a test to see if the format link is established";
     console.log(columnSipping);
     
     
-    
+    //to display the information
     var sipAncestor = document.createElement("div");
     
     sipAncestor.classList.add("tileis-ancestor");
@@ -67,6 +65,7 @@ const testText = "This is a test to see if the format link is established";
     sipChild2.appendChild(sipDesTitle);
     
     }
+
     //food api
 const foodOptions = {
 	method: 'GET',
@@ -81,6 +80,7 @@ fetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_mi
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
 
+
 //drink api
 const drinkOptions = {
         method: 'GET',
@@ -90,25 +90,26 @@ const drinkOptions = {
         }
     };
     
-    fetch(drinkUrl)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+    fetch('https://the-cocktail-db.p.rapidapi.com/search.php?s=' + sipInput, drinkOptions)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
 
 //food api variable
-var foodUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes';
+// var foodUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes';
 //drink api variable 
-var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?' + sipinput;
+// var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?s=rum';
+// console.log(drinkUrl)
 
 //change to getSipData
 
-function testsip(event)
-{
-event.preventDefault;
-console.log('this is the test sip event');
-console.log(sipInput);
+// function testsip(event)
+// {
+// event.preventDefault;
+// console.log('this is the test sip event');
+// console.log(sipInput);
 
-}
+// }
 
 
 
@@ -118,9 +119,9 @@ console.log(sipInput);
 function runSipImage()
 {
   console.log("code is running in the the function");
-  fetch(drinkUrl, drinkOptions)
+  fetch(drinkOptions)
   .then(function (response) {
-    console.log("resposne is good");
+    console.log("response is good");
       if (response.ok) {
         response.json().then(function (data) {
           console.log(data);
@@ -132,9 +133,6 @@ function runSipImage()
           var firstimage = data.drinks[0].strDrinkThumb;
          imageSip.src = firstimage;
          }
-  
-        
-  
         });
       } else {
         alert('Error: ' + response.statusText);
@@ -143,24 +141,18 @@ function runSipImage()
 }
 
  //here is the button response for the Chow button
- btnSip.addEventListener('click',runChowImage)
+//  btnSip.addEventListener('click',runChowImage)
 
- function runChowImage()
-{
-  console.log("code is running in the the function");
-  fetch(foodUrl, foodOptions)
-  .then(function (response) {
-    console.log(data);
-    console.log("resposne is good");
-      
-        
-  
-       
-      } 
-        
-      
-    )
-}
+//  function runChowImage()
+// {
+//   console.log("code is running in the the function");
+//   fetch(foodUrl, foodOptions)
+//   .then(function (response) {
+//     console.log(data);
+//     console.log("resposne is good");
+//       } 
+//       )
+// }
  
 
 
