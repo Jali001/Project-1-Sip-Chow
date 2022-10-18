@@ -1,7 +1,9 @@
 
 var btnSip = document.getElementById('button-Sip');
 var btnChow = document.getElementById('button-Chow');
-
+var sipInput = document.getElementById("box1");
+var sipTest = sipInput.value.toLowerCase();
+console.log(sipTest);
 const testText = "This is a test to see if the format link is established";
 
 
@@ -89,7 +91,7 @@ const drinkOptions = {
         }
     };
     
-    fetch('https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka', drinkOptions)
+    fetch(drinkUrl)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
@@ -97,7 +99,7 @@ const drinkOptions = {
 //food api variable
 var foodUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes';
 //drink api variable 
-var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka';
+var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?' + sipinput;
 
 //change to getSipData
 
