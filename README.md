@@ -1,7 +1,7 @@
 # Project-1-Sip-Chow:
 07 Project 1: Interactive Front-End Application
 
-##Link to Application: https://jali001.github.io/Project-1-Sip-Chow/
+## Link to Application: https://jali001.github.io/Project-1-Sip-Chow/
 
 
 # Discription:
