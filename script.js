@@ -83,7 +83,7 @@ fetch(foodUrl, foodOptions)
     };
   })
 });
-// this function diplays all the drinks that were relevant to the search 
+// this function diplays all the foods that were relevant to the search 
 function displayFood(image, meal, howTo) 
 {
   console.log(image);
