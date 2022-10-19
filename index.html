@@ -16,35 +16,30 @@
 <header class = "header">
                                         <!--Title of page-->
     <h1><i class="fa-solid fa-martini-glass"></i>  Sip & Chow  <i class="fa-solid fa-utensils"></i></h1>
-
 </header>
 
 <!--Body will include the buttons to search for food, beverage, and provide for input-->
 <body>
+  <label><h4>Find the food<i class="fa-solid fa-utensils"></i>  and drinks<i class="fa-solid fa-martini-glass"></i> based on your desired ingredients and critieria.
+    So that I can choose the perfect meal and/or beverage.</h4></label>
     <!--drink section -->
-      <div class="columns" id = "SipResultContent">
-    
-       
-        <div class="column" id = "sipping">
+    <div class="columns" id = "SipResultContent">
+    <div class="column" id = "sipping">
             <label for="name"><h2>I Would Like To:</h2></label>
-            <div>
-              <input type="text" id="box1" name="drink-options" placeholder = "Sip...">
-              <button class="btn btn-primary search" type="button" id="button-Sip"><i class="fa-solid fa-martini-glass"></i>
-            </div>
-        </div>
+            <div><input list="browsers-sip" id="box1" name="drink-options" placeholder = "Sip...">
+            <button class="btn btn-primary search" type="button" id="button-Sip">SubmitSip<i class="fa-solid fa-martini-glass"></i></div>
       </div>
-
-      <!--Food section -->
-   
-
+    </div>
+    <!--Food section -->
+      <div class="columns" id = "SipResultContent">
         <div class="column" id="chowing">
           <label for="name"><h2>I Would Like To:</h2></label>
           <div>
             <input type="text" id="box2" name="name" placeholder = "Chow...">
-            <button class="btn btn-primary search" type="button" id="button-Chow"><i class="fa-solid fa-utensils"></i>
+            <button class="btn btn-primary search" type="button" id="button-Chow">SubmitChow<i class="fa-solid fa-utensils"></i>
           </div>
-        <!---->
       </div>
+
                        <!--Jguery Link-->
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -52,7 +47,7 @@
     crossorigin="anonymous"></script>
 
         <!--Java Script link-->
-<script src = "script.js"></script>    
+    <script src = "script.js"></script>    
 </body>
 <!--Body End-->
 </html>
