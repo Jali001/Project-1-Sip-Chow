@@ -1,7 +1,9 @@
 
 var btnSip = document.getElementById('button-Sip');
 var btnChow = document.getElementById('button-Chow');
-
+var sipInput = document.getElementById("box1");
+var sipTest = sipInput.value.toLowerCase();
+console.log(sipTest);
 const testText = "This is a test to see if the format link is established";
 
 
@@ -89,7 +91,7 @@ const drinkOptions = {
         }
     };
     
-    fetch('https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka', drinkOptions)
+    fetch(drinkUrl)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
@@ -97,7 +99,7 @@ const drinkOptions = {
 //food api variable
 var foodUrl = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes';
 //drink api variable 
-var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka';
+var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?' + sipinput;
 
 //change to getSipData
 
@@ -105,6 +107,29 @@ var drinkUrl = 'https://the-cocktail-db.p.rapidapi.com/search.php?s=vodka';
   //here is the button response for the Sip button
   btnSip.addEventListener('click',runSipImage)
 
+
+  function sipDropDown()
+  {
+    fetch(drinkUrl, drinkOptions)
+  .then(function (response) {
+    console.log("resposne is good");
+      if (response.ok) {
+        response.json().then(function (data) 
+        {
+          const mySipArray =[];
+          for (var i =0; data.drinks.length; i++)
+          {
+            for(var f =0;ls
+              )
+          }
+        
+        
+        });
+      } else {
+        alert('Error: ' + response.statusText);
+      }
+    })
+  }
 function runSipImage()
 {
   console.log("code is running in the the function");
