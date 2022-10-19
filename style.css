@@ -1,7 +1,7 @@
 /*Sip & Chow Header*/
 header {
     text-align: center;
-   font-size: 50px;
+   font-size: 60px;
    color: #FFF;
    background-color: #333;
    text-shadow: green 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
@@ -23,8 +23,16 @@ header {
     font-size: 20px;
     align-items: center;
     box-sizing: border-box;
-    border:green 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
 }
+label h4{
+    font-size: 25px;
+    text-shadow: green 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    
+}
+
 /* I would like to :*/
 label h2{
     margin-top: 20px;
